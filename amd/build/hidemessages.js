@@ -1,0 +1,1 @@
+define([],function(){return{init:function(){var e=document.querySelector("div.popover-region[data-region='popover-region-messages']");e&&(e.style.display="none");var t=document.querySelector("a#message-user-button");t&&(t.style.display="none");var n=document.querySelector(".btn-group.header-button-group.mx-3");n&&(n.style.display="none")}}});

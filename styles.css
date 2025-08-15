@@ -1,0 +1,6 @@
+/* Oculta os elementos de mensagens SOMENTE quando a classe for adicionada ao <body> */
+body.quiz-inprogress div.popover-region[data-region='popover-region-messages'],
+body.quiz-inprogress a#message-user-button,
+body.quiz-inprogress .btn-group.header-button-group.mx-3 {
+    display: none !important;
+}
