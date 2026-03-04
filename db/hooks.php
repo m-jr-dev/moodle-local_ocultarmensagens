@@ -15,17 +15,21 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version details for local_ocultarmensagens plugin.
+ * Hook callbacks definition.
  *
  * @package    local_ocultarmensagens
- * @copyright  2025 Marcelo M. Almeida Jr.
+ * @copyright  2026 Marcelo M. Almeida Jr.
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'local_ocultarmensagens';
-$plugin->version = 2026030401;
-$plugin->requires = 2024042200;
-$plugin->maturity = MATURITY_STABLE;
-$plugin->release = '1.0.1';
+$callbacks = [
+    [
+        'hook' => \core\hook\output\before_standard_head_html_generation::class,
+        'callback' => [
+            \local_ocultarmensagens\hook_callbacks::class,
+            'before_standard_head_html_generation',
+        ],
+    ],
+];
